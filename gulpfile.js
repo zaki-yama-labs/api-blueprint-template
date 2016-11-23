@@ -1,29 +1,18 @@
 var gulp = require('gulp'),
     aglio = require('gulp-aglio'),
-    ejs = require('gulp-ejs'),
-    rename = require('gulp-rename'),
-    browserSync = require('browser-sync'),
-    rimraf = require('rimraf');
+    browserSync = require('browser-sync');
 
-var SRC_FILES = ['src/**/*.md'],
-    INDEX_FILE = 'src/index.md',
+var SRC_DIR = 'src',
     DEST_DIR = 'dest';
 
-gulp.task('combine', function(){
-  return gulp.src(INDEX_FILE)
-    .pipe(ejs({},{ ext: '.md' }))
-    .pipe(rename('index.md'))
-    .pipe(gulp.dest(DEST_DIR));
-});
-
-gulp.task('build', ['combine'], function() {
-  return gulp.src(DEST_DIR + '/index.md')
+gulp.task('build', function() {
+  return gulp.src(SRC_DIR + '/index.md')
     .pipe(aglio({template: 'default'}))
     .pipe(gulp.dest(DEST_DIR));
 });
 
 gulp.task('watch', function () {
-  gulp.watch(SRC_FILES, ['build', browserSync.reload]);
+  gulp.watch(SRC_DIR + '/**/*.md', ['build', browserSync.reload]);
 });
 
 gulp.task('browserSync', function() {
@@ -39,9 +28,4 @@ gulp.task('browserSync', function() {
   });
 });
 
-gulp.task('clean', function(cb) {
-  rimraf(DEST_DIR, cb);
-});
-
-gulp.task('publish', ['clean', 'build']);
 gulp.task('default', ['build', 'watch', 'browserSync']);
