@@ -1,20 +1,19 @@
 API Blueprint Template
 ======================
 
-A template to write API Document with [API Blueprint](https://apiblueprint.org/generated)
+A template to write API Document with [API Blueprint](https://apiblueprint.org/generated).
 
 ## Stack
 
 Currently using these tools to generate API document:
 
-- [aglio](https://github.com/danielgtaylor/aglio) ([gulp-aglio](https://www.npmjs.com/package/gulp-aglio))
-- [api-mock](https://github.com/localmed/api-mock)
+- [aglio](https://github.com/danielgtaylor/aglio) for API Blueprint parser
+- [drakov](https://github.com/Aconex/drakov) for mock server
 - TODO: [dredd](https://github.com/apiaryio/dredd)
 
 ## Installation
 
 ```
-$ npm install -g gulp
 $ npm install
 ```
 
@@ -22,20 +21,13 @@ $ npm install
 
 ### Basic Usage
 
-Run
+```zsh
+# Run API doc server at http://localhost:8080
+$ npm start
 
-```
-$ gulp
-```
+# Run mock server at http://localhost:8081
+$ npm run drakov
 
-Then it generates api docs, runs local server at [http://localhost:8080].
-It also watches file changes in `docs` and when updating it reloads the browser automatically.
-
-### Run mock server
-
-With [api-mock](https://github.com/localmed/api-mock).
-
-```
-$ npm install -g api-mock
-$ api-mock published/index.md
+# List all endpoints at http://localhost:8081/drakov
+$ npm run discover
 ```
