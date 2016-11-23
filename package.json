@@ -9,4 +9,12 @@
   "keywords": [],
   "author": "",
   "license": "ISC"
+  "devDependencies": {
+    "browser-sync": "^2.18.2",
+    "gulp": "^3.9.1",
+    "gulp-aglio": "0.0.10",
+    "gulp-ejs": "^2.2.1",
+    "gulp-rename": "^1.2.2",
+    "rimraf": "^2.5.4"
+  }
 }
