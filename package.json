@@ -4,6 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "start": "aglio -i src/index.md -p 8080 --server",
+    "mock": "drakov -f \"src/**/*.md\" -p 8081 --watch",
+    "discover": "drakov -f \"src/**/*.md\" -p 8081 --discover",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
@@ -11,8 +14,6 @@
   "license": "MIT",
   "devDependencies": {
     "aglio": "^2.3.0",
-    "browser-sync": "^2.18.2",
-    "gulp": "^3.9.1",
-    "gulp-aglio": "0.0.10"
+    "drakov": "^1.0.1"
   }
 }
