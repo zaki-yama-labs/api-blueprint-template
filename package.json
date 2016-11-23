@@ -7,8 +7,8 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
-  "author": "",
-  "license": "ISC"
+  "author": "Shingo Yamazaki<shingoyamazaki00@gmail.com>",
+  "license": "MIT",
   "devDependencies": {
     "browser-sync": "^2.18.2",
     "gulp": "^3.9.1",
