@@ -7,7 +7,7 @@ A template to write API Document with [API Blueprint](https://apiblueprint.org/g
 
 Currently using these tools to generate API document:
 
-- [aglio](https://github.com/danielgtaylor/aglio) for API Blueprint parser
+- [aglio](https://github.com/danielgtaylor/aglio) for API Blueprint renderer
 - [drakov](https://github.com/Aconex/drakov) for mock server
 - TODO: [dredd](https://github.com/apiaryio/dredd)
 
