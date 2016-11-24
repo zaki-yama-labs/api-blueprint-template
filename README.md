@@ -26,7 +26,7 @@ $ npm install
 $ npm start
 
 # Run mock server at http://localhost:8081
-$ npm run drakov
+$ npm run mock
 
 # List all endpoints at http://localhost:8081/drakov
 $ npm run discover
