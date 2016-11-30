@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "aglio -i src/index.md -p 8080 --server",
+    "build": "aglio -i src/index.md -o dest/index.html",
     "mock": "drakov -f \"src/**/*.md\" -p 8081 --watch",
     "discover": "drakov -f \"src/**/*.md\" -p 8081 --discover",
     "test": "echo \"Error: no test specified\" && exit 1"
